@@ -40,7 +40,7 @@ def recommend(name, state, city):
 # streamlit
 ##################################################################
 
-st.header('Restaurant Recommendation System ')
+st.header('Restaurants Recommendation System ')
 
 st.image(
             "https://media.timeout.com/images/105284814/750/422/image.jpg"
