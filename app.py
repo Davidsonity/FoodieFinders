@@ -36,29 +36,6 @@ def recommend(name, state, city):
         return recommendation[:11]
 
 
-def table(df):
-    fig = go.Figure(data=[go.Table(
-        columnorder=[1, 2, 3, 4, 5, 6],
-        columnwidth=[20, 20, 20, 30, 20, 20],
-        header=dict(values=list(['Name', 'Street Address', 'Location', 'Type', 'Reviews', 'Contact Number']),
-                    line_color='black', font=dict(color='black', family="Gravitas One", size=20), height=40,
-                    fill_color='#FFD9BA',
-                    align='center'),
-        cells=dict(
-            values=[df['Name'], df['Street Address'], df['Location'], df['Type'], df['Reviews'], df['Contact Number']],
-            font=dict(color='black', family="Lato", size=16),
-            fill_color='#FFFDD0',
-            align='left'))
-    ])
-
-    fig.update_layout(height=700,
-                      title={'text': "Top 10 Restaurants Recommendations",
-                             'font': {'size': 22, 'family': 'Gravitas One'}},
-                      title_x=0.5
-                      )
-    return st.plotly_chart(fig, use_container_width=True)
-
-
 ####################################################################
 # streamlit
 ##################################################################
@@ -84,7 +61,23 @@ city_ = st.sidebar.selectbox(
     "City location", cities
 )
 
+about_df = df[(df['Name'] == name_) & (df['state'] == state_) & (df['city'] == city_)]
+about_name = about_df['Name'].values[0]
+about_location = about_df['Location'].values[0]
+about_type = about_df['Type'].values[0]
+about_review = str(about_df['Reviews'].values[0])
+about_comment = about_df['Comments'].values[0]
+about_contact = about_df['Contact Number'].values[0]
+
 st.sidebar.image('https://1000logos.net/wp-content/uploads/2019/06/TripAdvisor-Logo.png',)
+
+st.sidebar.subheader('About Restaurant')
+st.sidebar.markdown("NAME: " + about_name + '. ')
+st.sidebar.markdown("LOCATION: " + about_location + '. ')
+st.sidebar.markdown("RATING: " + about_review + '. ')
+st.sidebar.markdown("CONTACT: " + about_contact + '. ')
+st.sidebar.markdown("TYPE: " + about_type + '. ')
+st.sidebar.markdown("COMMENT: " + about_comment + '. ')
 
 if st.button('Show Recommendations'):
     df_recommend = recommend(name_, state_, city_)
@@ -130,5 +123,6 @@ if st.button('Show Recommendations'):
     folium_static(rest_map)
 
     # display table
-    table(final_df)
+    st.subheader("Top 10 Recommended Restaurants")
+    st.dataframe(data=final_df[['Name', 'Street Address', 'Location', 'Type', 'Contact Number', 'Reviews', 'Comments']])
 
