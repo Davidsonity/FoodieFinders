@@ -73,7 +73,7 @@ st.sidebar.image('https://1000logos.net/wp-content/uploads/2019/06/TripAdvisor-L
 st.sidebar.subheader('About Restaurant')
 st.sidebar.markdown("NAME: " + about_name + '. ')
 st.sidebar.markdown("LOCATION: " + about_location + '. ')
-st.sidebar.markdown("RATING: " + about_review + '. ')
+st.sidebar.markdown("REVIEW: " + about_review + '. ')
 st.sidebar.markdown("CONTACT: " + about_contact + '. ')
 st.sidebar.markdown("TYPE: " + about_type + '. ')
 st.sidebar.markdown("COMMENT: " + about_comment + '. ')
