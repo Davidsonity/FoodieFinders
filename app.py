@@ -116,13 +116,14 @@ if st.button('Show Recommendations'):
             popup='||NAME||' + '\n' + label + '\n' + '|------------------------------------|' + '\n' + '||TYPE||' + type_,
         ).add_to(restaurants)
 
+
+    # display table
+    st.subheader("Top 10 Recommended Restaurants")
+    st.dataframe(data=final_df[['Name', 'Street Address', 'Location', 'Type', 'Contact Number', 'Reviews', 'Comments']])
+
     # display map
     st.subheader('Map of Restaurants')
     st.markdown("Red Icon: Restaurant's location ")
     st.markdown("Blue Icon: Recommended Restaurants")
     folium_static(rest_map)
-
-    # display table
-    st.subheader("Top 10 Recommended Restaurants")
-    st.dataframe(data=final_df[['Name', 'Street Address', 'Location', 'Type', 'Contact Number', 'Reviews', 'Comments']])
 
