@@ -101,19 +101,18 @@ if st.button('Show Recommendations'):
             fill_opacity=0.8
         )
     )
-    label = '||NAME||' + '\n' + df_recommend['Name'][0] + '\n' + '|------------------------------------|' + '\n' \
-            + '||TYPE||' + '\n' + df_recommend['Type'][0]
+    label = df_recommend['Name'][0]
     folium.Marker([latitude, longitude], popup=label, icon=folium.Icon(color='red')).add_to(rest_map)
 
     # instantiate a mark cluster object for the incidents in the dataframe
     restaurants = plugins.MarkerCluster().add_to(rest_map)
 
     # loop through the dataframe and add each data point to the mark cluster
-    for lat, lng, label, type_ in zip(final_df['lat'], final_df['lon'], final_df['Name'], final_df['Type']):
+    for lat, lng, label in zip(final_df['lat'], final_df['lon'], final_df['Name']):
         folium.Marker(
             location=[lat, lng],
             icon=None,
-            popup='||NAME||' + '\n' + label + '\n' + '|------------------------------------|' + '\n' + '||TYPE||' + type_,
+            popup=label
         ).add_to(restaurants)
 
 
