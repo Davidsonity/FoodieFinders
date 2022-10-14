@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
 import folium
 from folium import plugins
 from streamlit_folium import folium_static
