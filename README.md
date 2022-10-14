@@ -1,8 +1,10 @@
-# **Restaurants Recommendation(USA) Engine**
+# **Restaurants Recommendation System**
 
 <center>
     <img src="https://cdn.vox-cdn.com/thumbor/jEOXUWBAr8tQzmXf0ZF1ma66Z0g=/0x432:5174x3019/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/20100019/shutterstock_1497472160.jpg" width="600" alt="cognitiveclass.ai logo" />
 </center>
+
+> A COMPLETE END TO END PROJECT. Visit Website @ https://davidsonity-restaurants-recommendation-system-app-wqpses.streamlitapp.com/
 
 ### INTRODUCTION
 This project is a Content-based Course Recommender System using Cosine Similarities.
