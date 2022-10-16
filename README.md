@@ -32,7 +32,7 @@ Columns Description: The following are the description of each columns in the da
 - Menu URL: Link to get Restaurant Menu
 - Price_Range: Unavailable
 
-### ### Steps taken to build restaurants recommender systems
+### Steps taken to build restaurants recommender systems
 - Data Collection 
 - Data Wrangling.
 - Data Cleaning
