@@ -7,7 +7,7 @@
 
 > A COMPLETE END TO END PROJECT. Visit Website @ https://davidsonity-restaurants-recommendation-system-app-wqpses.streamlitapp.com/
 
-## INTRODUCTION
+### INTRODUCTION
 The content-based recommender system is highly based on the similarity calculation among items. The similarity or closeness of items is measured based on the similarity in the content or features of those items. The movies genres are important features used in this project
 
 
