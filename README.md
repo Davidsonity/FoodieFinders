@@ -6,6 +6,8 @@
 </center>
 
 > Deployment Site @ https://davidsonity-restaurants-recommendation-system-app-wqpses.streamlitapp.com/
+>
+> View Notebook @ https://github.com/Davidsonity/Restaurants-Recommendation-System/blob/main/notebook.ipynb
 
 ### INTRODUCTION
 The content-based recommender system is highly based on the similarity calculation among items. The similarity or closeness of items is measured based on the similarity in the content or features of those items.
