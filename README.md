@@ -1,4 +1,4 @@
-## **TripAdvisor Restaurant Recommendation (USA)**
+## **FoodieFinders**
 > Content-based Restaurants Recommender System using Cosine Similarities.
 
 <center>
