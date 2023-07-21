@@ -124,4 +124,3 @@ if st.button('Show Recommendations'):
     st.markdown("Red Icon: Restaurant's location ")
     st.markdown("Blue Icon: Recommended Restaurants")
     folium_static(rest_map)
-
